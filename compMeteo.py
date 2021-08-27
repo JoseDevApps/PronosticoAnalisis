@@ -38,4 +38,6 @@ df = df.loc[mask]
 mask = (dfp.index > start_date) & (dfp.index<= end_date)
 dfp = dfp.loc[mask]
 df_Total = df.merge(dfp, left_index=True, right_index=True)
+df_Total = df_Total.resample(str(granularidad)+'min').first()
+print(df_Total)
 print(df_Total.info())
