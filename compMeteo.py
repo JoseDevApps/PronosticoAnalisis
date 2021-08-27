@@ -8,13 +8,13 @@ import matplotlib
 pathObs = 'D:/CPERv/reporteAgosto/' # direccion observaciones
 pathWRF = 'D:/CPERv/reporteAgosto/' # direccion pronostico WRF
 fileObs = 'MesObservaciones.csv' # nombre del archivo csv observado
-fileWRF = 'WRF_data/2021-07-22.csv' # nombre del archivo csv WRF extraido previamente
+fileWRF = 'MesWRF.csv' # nombre del archivo csv WRF extraido previamente
 datetimetagObs = 'TIME_STAMP' # nombre de la etiqueta para la columna datetime
 datetimetagWRF = 'Time' # nomnbre de la etiqueta para la columna datetime
-granularidad = 5 # en minutos de tipo entero de salidas WRF
-granularidadFinal = 5 # en minutos de tipo entero para el dataframe resultante
-start_date = '2021-07-23' # Inicio de datos para analisis
-end_date = '2021-07-24' # fin de datos para analisis
+granularidad = 15 # en minutos de tipo entero de salidas WRF
+granularidadFinal = 15 # en minutos de tipo entero para el dataframe resultante
+start_date = '2021-07-20' # Inicio de datos para analisis
+end_date = '2021-08-20' # fin de datos para analisis
 nombreOut = 'UyuniMesPrueba' # nombre del archivo de salida despues de juntarlos en un mismo dataframe
 # Lectura observados
 df = pd.read_csv(pathObs+'/'+fileObs)
